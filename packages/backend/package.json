@@ -1,15 +1,27 @@
 {
   "name": "@workspace/backend",
+  "type": "module",
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "dev": "convex dev",
     "setup": "convex dev --until-success"
+  },
+  "exports": {
+    "/convex": {
+      "types": "./convex/_generated/api.d.ts",
+      "import": "./convex/_generated/api.js",
+      "default": "./convex/_generated/api.js"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.4.1",
   "devDependencies": {
+    "@workspace/eslint-config": "workspace:^",
     "@workspace/typescript-config": "workspace:*",
+    "eslint": "^9.32.0",
     "typescript": "latest"
   },
   "dependencies": {

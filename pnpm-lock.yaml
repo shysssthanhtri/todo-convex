@@ -79,9 +79,15 @@ importers:
         specifier: ^1.27.0
         version: 1.27.0(react@19.1.1)
     devDependencies:
+      '@workspace/eslint-config':
+        specifier: workspace:^
+        version: link:../eslint-config
       '@workspace/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      eslint:
+        specifier: ^9.32.0
+        version: 9.32.0(jiti@2.5.1)
       typescript:
         specifier: latest
         version: 5.9.2
