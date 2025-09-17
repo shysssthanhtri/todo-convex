@@ -5,6 +5,7 @@ import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 import unusedImports from "eslint-plugin-unused-imports";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
+import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 
 /**
  * A shared ESLint configuration for the repository.
@@ -15,6 +16,7 @@ export const config = [
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
+  eslintPluginPrettier,
   {
     plugins: {
       turbo: turboPlugin,
