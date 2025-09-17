@@ -8,7 +8,7 @@
     "setup": "convex dev --until-success"
   },
   "exports": {
-    "/convex": {
+    "./convex": {
       "types": "./convex/_generated/api.d.ts",
       "import": "./convex/_generated/api.js",
       "default": "./convex/_generated/api.js"
