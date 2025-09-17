@@ -1,7 +1,10 @@
 "use client";
 
+import { ConvexProvider, ConvexReactClient } from "convex/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import * as React from "react";
+
+const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL ?? "");
 
 /**
  * Wraps application UI in a configured NextThemes provider for theme management.
@@ -18,14 +21,16 @@ import * as React from "react";
  */
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-      enableColorScheme
-    >
-      {children}
-    </NextThemesProvider>
+    <ConvexProvider client={convex}>
+      <NextThemesProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+        enableColorScheme
+      >
+        {children}
+      </NextThemesProvider>
+    </ConvexProvider>
   );
 }
