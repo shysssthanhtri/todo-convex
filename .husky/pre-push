@@ -1,2 +1,2 @@
-turbo build
-turbo test
+npx --no-install turbo build
+npx --no-install turbo test

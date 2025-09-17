@@ -11,8 +11,7 @@
       "dependsOn": ["^lint"]
     },
     "lint:fix": {
-      "cache": false,
-      "persistent": true
+      "cache": false
     },
     "check-types": {
       "dependsOn": ["^check-types"]
@@ -22,8 +21,7 @@
       "persistent": true
     },
     "test": {
-      "cache": false,
-      "persistent": true
+      "cache": false
     }
   }
 }

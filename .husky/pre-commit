@@ -1,1 +1,1 @@
-turbo lint
+npx --no-install turbo lint
