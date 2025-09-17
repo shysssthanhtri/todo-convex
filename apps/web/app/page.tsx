@@ -1,5 +1,12 @@
 import { Button } from "@workspace/ui/components/button";
 
+/**
+ * Renders a centered page with a "Hello World" heading and a small Button.
+ *
+ * The layout is vertically stacked and centered both horizontally and vertically.
+ *
+ * @returns The JSX element for this page.
+ */
 export default function Page() {
   return (
     <div className="flex items-center justify-center min-h-svh">
