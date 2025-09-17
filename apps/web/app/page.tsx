@@ -1,8 +1,8 @@
 "use client";
 
+import { api } from "@workspace/backend/convex";
 import { Button } from "@workspace/ui/components/button";
 import { useQuery } from "convex/react";
-import { api } from "@workspace/backend/convex";
 
 /**
  * Renders a centered page with a "Hello World" heading and a small Button.
