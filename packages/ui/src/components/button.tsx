@@ -34,6 +34,16 @@ const buttonVariants = cva(
   },
 );
 
+/**
+ * Styled Button component that renders a native <button> or a passthrough element with variant/size styling.
+ *
+ * Renders either a native `<button>` or the provided child element (via Radix `Slot`) when `asChild` is true,
+ * and applies classes produced by `buttonVariants` merged with an optional `className`.
+ *
+ * @param asChild - If true, use the child element as the rendered element instead of a native `<button>`.
+ * @param variant - Visual style variant to apply (e.g., `default`, `destructive`, `outline`, `secondary`, `ghost`, `link`).
+ * @param size - Size variant to apply (e.g., `default`, `sm`, `lg`, `icon`).
+ */
 function Button({
   className,
   variant,
